@@ -1,4 +1,4 @@
-print('hello world')
-print('你什么时候死的，昨天')
-print('2b')
-print('这并不是我想要的生活')
+from selenium import webdriver
+
+driver = webdriver.Chrome()
+driver.get('http://www.baidu.com')
