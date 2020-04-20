@@ -57,7 +57,7 @@ class TestCase(object):
         self.tt.send_pwd(123456)
         self.tt.click_sub()
         self.tt.click_new_form()
-        # sleep(2)
+        sleep(2)
         self.tt.click_new_doc()
         print('成功了')
         self.driver.quit()
