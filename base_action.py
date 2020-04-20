@@ -15,6 +15,6 @@ class BaseAction:
         self.find_element(loc).send_keys(text)
 
     def find_element(self, ele):
+        return WebDriverWait(self.driver, 10, 0.3).until(lambda x: x.find_element(ele[0], ele[1]))
         # return WebDriverWait(self.driver, 10, 0.3).until(lambda x: x.find_element(ele[0], ele[1]))
-        # return WebDriverWait(self.driver, 10, 0.3).until(lambda x: x.find_element(ele[0], ele[1]))
-        return WebDriverWait(self.driver, 10, 0.1).until(EC.visibility_of_element_located((ele[0], ele[1])))
+        # return WebDriverWait(self.driver, 10, 0.1).until(EC.visibility_of_element_located((ele[0], ele[1])))
